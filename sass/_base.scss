@@ -12,25 +12,43 @@ img, a, div {
 }
 
 a {
-    // color: $color-blue;
+    color: $color_black;
     display: inline-block;
     text-decoration: none;
 }
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    font-size: 62.5%;  /* 10px/16px = 62.5% -> 1rem = 10px */
     scroll-behavior: smooth;
 }
 
 body{
-    // background-image: linear-gradient(to right, rgba(5, 5, 5, 1), rgba(0, 0, 0, 1));
-    // color: $color-grey-light-1;
+    color: $color_black;
     font-family: $font-primary;
     font-weight: 400;
     line-height: 1.6;
 }
 
 .container{
+    margin: 0 auto;
+    max-width: $bp_lg;
+    width: 90%;
+}
 
+.overlay{
+    display: none;
+
+    @media only screen and (max-width: $bp_sm) {
+        &.active{
+            background: rgba(0, 0, 0, .5);
+            display: block;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }  
+    }
 }

@@ -1,0 +1,86 @@
+nav{
+    background: $color_white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 25;
+
+    .container{
+        align-items: center;
+        display: flex;
+        height: 11rem;
+        justify-content: space-between;
+        position: relative;
+        
+        @media only screen and (max-width: $bp_sm){
+            height: 9.6rem;
+        }
+        
+        .logo{
+            background: transparent url("../../images/global/logo-dark.png") no-repeat center / contain;
+            height: 2.4rem;
+            width: 19.6rem;
+        }
+    
+        ul{
+            display: flex;
+            gap: 4.2rem;
+            list-style: none;
+
+            @media only screen and (max-width: $bp_sm){
+                display: none;
+
+                &.active{
+                    background: $color_black;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.6rem;
+                    left: 0;
+                    padding: 5.1rem 2.4rem;
+                    position: fixed;
+                    top: 9.6rem;
+                    width: 100%;
+
+                    a{
+                        color: $color_white;
+                        font: 400 2.4rem/2.5rem $font_primary;
+                        
+                        &:hover{
+                            border-bottom: .1rem solid $color_white;
+                        }
+                    }
+                }
+            }
+
+            li{
+                a{
+                    color: $color_dark_grey;
+                    font: 400 1.4rem/1.4rem $font_primary;
+                    letter-spacing: .2rem;
+                    text-transform: uppercase;
+                    
+                    &:hover{
+                        border-bottom: .1rem solid $color_dark_grey;
+                    }
+                }
+            }
+        }
+
+        .menu{
+            display: none;
+            @media only screen and (max-width: $bp_sm){
+                background: transparent url("../../images/global/icon-hamburger.svg") no-repeat center / contain;
+                border: none;
+                cursor: pointer;
+                display: block;
+                height: 2rem;
+                outline: none;
+                width: 2.4rem;
+
+                &.active{
+                    background-image: url("../../images/global/icon-close.svg");
+                }
+            }
+        }
+    }
+}
