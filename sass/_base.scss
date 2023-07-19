@@ -28,6 +28,11 @@ body{
     font-family: $font-primary;
     font-weight: 400;
     line-height: 1.6;
+    padding: 13rem 0;
+
+    @media only screen and (max-width: $bp_sm) {
+        padding: 9.6rem 0;
+    }
 }
 
 .container{
@@ -50,5 +55,22 @@ body{
             width: 100%;
             z-index: 10;
         }  
+    }
+}
+
+.btn_primary{
+    background: $color_white;
+    border-radius: .8rem;
+    border: none;
+    color: $color_dark_grey;
+    font: 500 1.5rem $font_primary;
+    outline: none;
+    padding: 1.6rem 2.9rem;
+    text-transform: uppercase;
+    transition: .1s all;
+
+    &:hover{
+        background: $color_light_peach;
+        color: $color_white;
     }
 }

@@ -84,3 +84,84 @@ nav{
         }
     }
 }
+
+#hero .container{
+    align-items: center;
+    background : $color_peach url("../../images/index/bg-pattern-hero-home.svg") no-repeat right;
+    border-radius : 1.5rem;
+    display: flex;
+    height : 64rem;
+    justify-content : space-between;
+    overflow : hidden;
+    padding : 9rem;
+    position: relative;
+
+    @media only screen and (max-width: $bp_md){
+        align-items: flex-start;
+        background-position: 16rem 50%;
+        height: 84.3rem;
+        justify-content: center;
+        padding-top: 6rem;
+    }
+
+    @media only screen and (max-width: $bp_sm){
+        background-position: 0 50%;
+        border-radius: 0rem;
+        height: 86rem;
+        padding: 8.4rem 1rem;
+        width: 100%;
+    }
+
+    .hero_info{
+        padding-left : .5rem;
+        position: relative;
+        z-index: 10;
+
+        @media only screen and (max-width: $bp_md){
+            text-align: center;
+        }
+        
+        h1{
+            color : $color_white;
+            font : 500 4.8rem/4.8rem $font_primary;
+            margin : 0 auto 3.1rem auto;
+            max-width : 54rem;
+            width: 100%;
+
+            @media only screen and (max-width: $bp_sm){
+                font: 500 3.2rem/3.6rem $font_primary;
+                margin : 0 auto 2.7rem auto;
+            }
+        }
+
+        p{
+            color : $color_white;
+            font : 400 1.6rem/2.6rem $font_primary;
+            margin-bottom: 3.7rem;
+            max-width : 45rem;
+            width: 100%;
+            
+            @media only screen and (max-width: $bp_md){
+                margin : 0 auto 2rem auto;
+            }
+            
+            @media only screen and (max-width: $bp_sm){
+                font: 400 1.5rem/2.5rem $font_primary
+            }
+        }
+    }
+
+    img{
+        bottom: -24rem;
+        height: 90rem;
+        object-fit: contain;
+        position: absolute;
+        right: -13rem;
+        width: 73rem;
+
+        @media only screen and (max-width: $bp_md){
+            left: 50%;
+            transform: translate(-50%, 11rem);
+        }
+    }
+}
