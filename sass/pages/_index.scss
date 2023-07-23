@@ -11,17 +11,17 @@ nav{
         height: 11rem;
         justify-content: space-between;
         position: relative;
-        
+
         @media only screen and (max-width: $bp_sm){
             height: 9.6rem;
         }
-        
+
         .logo{
             background: transparent url("../../images/global/logo-dark.png") no-repeat center / contain;
             height: 2.4rem;
             width: 19.6rem;
         }
-    
+
         ul{
             display: flex;
             gap: 4.2rem;
@@ -44,7 +44,7 @@ nav{
                     a{
                         color: $color_white;
                         font: 400 2.4rem/2.5rem $font_primary;
-                        
+
                         &:hover{
                             border-bottom: .1rem solid $color_white;
                         }
@@ -58,7 +58,7 @@ nav{
                     font: 400 1.4rem/1.4rem $font_primary;
                     letter-spacing: .2rem;
                     text-transform: uppercase;
-                    
+
                     &:hover{
                         border-bottom: .1rem solid $color_dark_grey;
                     }
@@ -120,7 +120,7 @@ nav{
         @media only screen and (max-width: $bp_md){
             text-align: center;
         }
-        
+
         h1{
             color : $color_white;
             font : 500 4.8rem/4.8rem $font_primary;
@@ -140,11 +140,11 @@ nav{
             margin-bottom: 3.7rem;
             max-width : 45rem;
             width: 100%;
-            
+
             @media only screen and (max-width: $bp_md){
                 margin : 0 auto 2rem auto;
             }
-            
+
             @media only screen and (max-width: $bp_sm){
                 font: 400 1.5rem/2.5rem $font_primary
             }
@@ -180,7 +180,7 @@ nav{
         grid-template-rows: repeat(3, 1fr);
         margin-top: 12rem;
     }
-    
+
     @media only screen and (max-width: $bp_sm){
         height: 80rem;
     }
@@ -284,6 +284,116 @@ nav{
                 top: 50%;
                 transform: translateY(-50%);
                 width: 10px;
+            }
+        }
+    }
+}
+
+#infos .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 16rem;
+    @media only screen and (max-width: $bp_md){
+        flex-direction: column;
+        margin-top: 9rem;
+    }
+    @media only screen and (max-width: $bp_sm){
+        gap: 7.5rem;
+        margin-top: 12rem;
+    }
+
+    > div{
+        flex: 1;
+        max-width: 35rem;
+        text-align: center;
+        @media only screen and (max-width: $bp_md){
+            column-gap: 4.8rem;
+            display: grid;
+            grid-template-columns: 20rem 1fr;
+            grid-template-rows: 6.6rem 1fr;
+            max-width: initial;
+            row-gap: 1.3rem;
+            text-align: start;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: $bp_md){
+            grid: initial;
+            row-gap: initial;
+            text-align: center;
+        }
+
+        &:nth-child(1){
+            .illustration_container{
+                transform: rotate(270deg);
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        &:nth-child(2){
+            .illustration_container{
+                transform: rotate(180deg);
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .illustration_container{
+            background: url("../../images/index/bg-pattern-hero-home.svg") no-repeat center / contain;
+            height: 20.2rem;
+            margin: 0 auto 4.6rem auto;
+            width: 20.2rem;
+
+            @media only screen and (max-width: $bp_md) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+            }
+            @media only screen and (max-width: $bp_sm){
+                grid-column: initial;
+                grid-row: initial;
+            }
+            img{
+                height: 100%;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+        h2{
+            align-self: flex-end;
+            color: $color_dark_grey;
+            font: 500 2rem/2.6rem $font_primary;
+            letter-spacing: .5rem;
+            margin-bottom: 3.2rem;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: $bp_md){
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                margin-bottom: 0;
+            }
+            @media only screen and (max-width: $bp_sm){
+                grid-column: initial;
+                grid-row: initial;
+                margin-bottom: 3rem;
+            }
+        }
+
+        p{
+            color: $color_dark_grey;
+            font: 400 1.6rem/2.6rem $font_primary;
+            @media only screen and (max-width: $bp_md){
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+            @media only screen and (max-width: $bp_sm){
+                grid-column: initial;
+                grid-row: initial;
             }
         }
     }
