@@ -28,10 +28,36 @@ body{
     font-family: $font-primary;
     font-weight: 400;
     line-height: 1.6;
-    padding: 13rem 0;
+    padding-top: 13rem;
+    position: relative;
+    overflow-x: hidden;
 
     @media only screen and (max-width: $bp_sm) {
-        padding: 9.6rem 0;
+        padding-top: 9.6rem;
+    }
+
+    .bg_leaf_1,
+    .bg_leaf_2{
+        background: url("../images/global/bg-pattern-leaf.svg") no-repeat center / contain;
+        height: 59.4rem;
+        position: absolute;
+        width: 100.6rem;
+        z-index: -10;
+
+        @media only screen and (max-width: $bp_md){
+            display: none;
+        }
+    }
+
+    .bg_leaf_1{
+        left: 0;
+        top: 47.5rem;
+    }
+
+    .bg_leaf_2{
+        bottom: 46.5rem;
+        right: 0;
+        transform: rotate(180deg);
     }
 }
 
@@ -72,5 +98,314 @@ body{
     &:hover{
         background: $color_light_peach;
         color: $color_white;
+    }
+}
+
+nav{
+    background: $color_white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 25;
+
+    .container{
+        align-items: center;
+        display: flex;
+        height: 11rem;
+        justify-content: space-between;
+        position: relative;
+
+        @media only screen and (max-width: $bp_sm){
+            height: 9.6rem;
+        }
+
+        .logo{
+            background: transparent url("../../images/global/logo-dark.png") no-repeat center / contain;
+            height: 2.4rem;
+            width: 19.6rem;
+        }
+
+        ul{
+            display: flex;
+            gap: 4.2rem;
+            list-style: none;
+
+            @media only screen and (max-width: $bp_sm){
+                display: none;
+
+                &.active{
+                    background: $color_black;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.6rem;
+                    left: 0;
+                    padding: 5.1rem 2.4rem;
+                    position: fixed;
+                    top: 9.6rem;
+                    width: 100%;
+
+                    a{
+                        color: $color_white;
+                        font: 400 2.4rem/2.5rem $font_primary;
+
+                        &:hover{
+                            border-bottom: .1rem solid $color_white;
+                        }
+                    }
+                }
+            }
+
+            li{
+                a{
+                    color: $color_dark_grey;
+                    font: 400 1.4rem/1.4rem $font_primary;
+                    letter-spacing: .2rem;
+                    text-transform: uppercase;
+
+                    &:hover{
+                        border-bottom: .1rem solid $color_dark_grey;
+                    }
+                }
+            }
+        }
+
+        .menu{
+            display: none;
+
+            @media only screen and (max-width: $bp_sm){
+                background: transparent url("../../images/global/icon-hamburger.svg") no-repeat center / contain;
+                border: none;
+                cursor: pointer;
+                display: block;
+                height: 2rem;
+                outline: none;
+                width: 2.4rem;
+
+                &.active{
+                    background-image: url("../../images/global/icon-close.svg");
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background: $color_black;
+    height: 39.3rem;
+    margin-top: 38.5rem;
+    
+    @media only screen and (max-width: $bp_md){
+        margin-top: 31.1rem;
+    }
+
+    @media only screen and (max-width: $bp_sm) {
+        height: 81.5rem;
+    }
+    
+    .container{
+        padding-top: 14.3rem;
+        position: relative;
+        
+        @media only screen and (max-width: $bp_sm){
+            padding-top: 25.2rem;
+        }
+
+        .talk{
+            background: $color_peach url("../images/global/bg-pattern-call-to-action-desktop.svg") no-repeat right / cover;
+            background-size: 80%;
+            border-radius: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 29.2rem;
+            padding: 0 9.4rem;
+            position: absolute;
+            row-gap: 2rem;
+            top: -22rem;
+            width: 100%;
+
+            @media only screen and (max-width: $bp_md){
+                align-items: center;
+                background: $color_peach url("../images/global/bg-pattern-call-to-action-desktop.svg") no-repeat right / cover;
+                background-position-x: 25%;
+                background-size: 130%;
+                display: flex;
+                flex-direction: column;
+                height: 35rem;
+                justify-content: center;
+                text-align: center;
+                top: -26.5rem;
+            }
+
+            @media only screen and (max-width: $bp_sm){
+                background: $color_peach url("../images/global/bg-pattern-call-to-action-desktop.svg") no-repeat right / cover;
+                background-position-x: 43%;
+                background-size: 250%;
+                height: 38rem;
+                padding: 0 2.2rem;
+                top: -19rem;
+            }
+
+            h3{
+                align-self: flex-end;
+                color: $color_white;
+                font: 500 4rem/4rem $font_primary;
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                max-width: 27rem;
+
+                @media only screen and (max-width: $bp_md){
+                    align-self: initial;
+                    grid-column: initial;
+                    grid-row: initial;
+                }
+
+                @media only screen and (max-width: $bp_sm){
+                    font: 500 3.2rem/3.6rem $font_primary;
+                }
+            }
+
+            p{
+                align-self: flex-start;
+                color: $color_white;
+                font: 400 1.6rem/2.6rem $font_primary;
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                max-width: 45rem;
+
+                @media only screen and (max-width: $bp_md){
+                    grid-column: initial;
+                    grid-row: initial;
+                    margin: 0 auto;
+                    max-width: 50rem;
+                }
+
+                @media only screen and (max-width: $bp_sm){
+                    font: 400 1.5rem/2.5rem $font_primary;
+                }
+            }
+
+            a{
+                align-self: center;
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+                justify-self: flex-end;
+
+                @media only screen and (max-width: $bp_md){
+                    grid-column: initial;
+                    grid-row: initial;
+                    margin-top: 1.2rem;
+                }
+            }
+        }
+    
+        .head{
+            border-bottom: 1px solid #333234;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 4rem;
+
+            @media only screen and (max-width: $bp_sm){
+                align-items: center;
+                border-bottom: none;
+                flex-direction: column;
+            }
+
+            .logo{
+                background: transparent url("../../images/global/logo-light.png") no-repeat center / contain;
+                height: 2.4rem;
+                width: 19.6rem;
+
+                @media only screen and (max-width: $bp_sm){
+                    margin-bottom: 3rem;
+                }
+            }
+            ul{
+                display: flex;
+                gap: 4.2rem;
+                list-style-type: none;
+                @media only screen and (max-width: $bp_sm){
+                    border-top: 1px solid #333234;
+                    flex-direction: column;
+                    gap: 3rem;
+                    padding-top: 3.2rem;
+                    text-align: center;
+                    width: 100%;
+                }
+                li{
+                    a{
+                        color: $color_white;
+                        font: 400 1.4rem/1.4rem $font_primary;
+                        letter-spacing: .2rem;
+                        text-transform: uppercase;
+                        &:hover{
+                            border-bottom: .1rem solid $color_white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .foot{
+            color: #8E8D8E;
+            display: flex;
+            font: 400 1.6rem/2.6rem $font_primary;
+            margin-top: 4rem;
+
+            @media only screen and (max-width: $bp_sm){
+                align-items: center;
+                flex-direction: column;
+                gap: 4.4rem;
+                margin-top: 0;
+            }
+
+            .address{
+                flex: 1;
+                max-width: 35rem;
+                > p:first-child{
+                    font-weight: 700;
+                }
+                @media only screen and (max-width: $bp_sm){
+                    text-align: center;
+                }
+            }
+
+            .contact{
+                flex: 1;
+                font-weight: 700;
+                max-width: 35rem;
+                @media only screen and (max-width: $bp_sm){
+                    text-align: center;
+                }
+            }
+
+            ul{
+                align-self: flex-end;
+                display: flex;
+                gap: 1.8rem;
+                list-style-type: none;
+                margin-left: auto;
+                @media only screen and (max-width: $bp_sm){
+                    align-self: center;
+                    margin-left: initial;
+                }
+                li{
+                    a{
+                        height: 2.4rem;
+                        width: 2.4rem;
+
+                        &:hover{
+                            filter: brightness(150%);
+                        }
+                        img{
+                            height: 100%;
+                            object-fit: contain;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }
