@@ -1,0 +1,46 @@
+#web_design_page{
+    #hero .container{
+        align-items: center;
+        background: $color_peach url("../../images/web_design/bg-pattern-intro-web.svg") no-repeat right / cover;
+        background-size: 80%;
+        border-radius: 1.5rem;
+        color: $color_white;
+        display: flex;
+        flex-direction: column;
+        height: 25.2rem;
+        justify-content: center;
+        text-align: center;
+
+        @media only screen and (max-width: $bp_md){
+            background-size: 120%;
+            background-position-x: -1%;
+        }
+
+        @media only screen and (max-width: $bp_sm){
+            background-position-x: 98%;
+            background-position-y: 110%;
+            background-size: 250%;
+            border-radius: 0;
+            height: 32rem;
+            width: 100%;
+        }
+
+        h1{
+            font: 500 4.8rem/4.8rem $font_primary;
+            margin-bottom: 2.5rem;
+
+            @media only screen and (max-width: $bp_sm){
+                font: 500 3.2rem/3.6rem $font_primary;
+            }
+        }
+
+        p{
+            font: 400 1.6rem/2.6rem $font_primary;
+            max-width: 40rem;
+            width: 95%;
+            @media only screen and (max-width: $bp_sm){
+                font: 400 1.5rem/2.5rem $font_primary;
+            }
+        }
+    }
+}
