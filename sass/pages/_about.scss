@@ -1,5 +1,5 @@
 #about_page{
-    #hero .container{
+    #about_us .container{
         border-radius: 1.5rem;
         display: flex;
         height: 48rem;
@@ -65,6 +65,103 @@
                 background-image: url("../../images/about/image-about-hero-tablet.jpg");
                 height: 32rem;
                 width: 100%;
+            }
+        }
+    }
+
+    #world_class_talent .container{
+        background: #FDF3F0;
+        border-radius: 1.5rem;
+        display: flex;
+        height: 64rem;
+        margin-top: 17rem;
+        overflow: hidden;
+
+        @media only screen and (max-width: $bp_md){
+            flex-direction: column;
+            height: 73.6rem;
+            margin-top: 12rem;
+        }
+
+        @media only screen and (max-width: $bp_sm){
+            border-radius: 0;
+            height: 86.5rem;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .talent_img{
+            background: url("../../images/about/image-world-class-talent-desktop.jpg") no-repeat center / cover;
+            width: 47.6rem;
+
+            @media only screen and (max-width: $bp_md){
+                background-image: url("../../images/about/image-world-class-talent-tablet.jpg");
+                height: 32rem;
+                width: 100%;
+            }
+
+            @media only screen and (max-width: $bp_sm){
+                background-image: url("../../images/about/image-world-class-talent-mobile.jpg");
+                height: 32rem;
+            }
+        }
+
+        .info{
+            background: url("../../images/about/bg-pattern-talent.svg") no-repeat bottom left / cover;
+            background-position-x: -15rem;
+            background-size: 95%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            padding: 0 3rem 0 9.3rem;
+
+            @media only screen and (max-width: $bp_md){
+                background-position-x: 100%;
+                background-position-y: 105%;
+                padding: 0 6rem;
+                text-align: center;
+            }
+            
+            @media only screen and (max-width: $bp_md){
+                padding: 0 2rem;
+            }
+
+            @media only screen and (max-width: $bp_md){
+                background-size: 150%;
+                background-position-x: -7%;
+                background-position-y: 101%;
+            }
+
+            h2{
+                color: $color_peach;
+                font: 500 4rem/4.8rem $font_primary;
+                margin-bottom: 2.2rem;
+
+                @media only screen and (max-width: $bp_md){
+                    margin-bottom: 2.3rem;
+                }
+
+                @media only screen and (max-width: $bp_sm){
+                    font: 500 3.2rem/3.6rem $font_primary;
+                }
+            }
+            p{
+                color: $color_dark_grey;
+                font: 400 1.6rem/2.6rem $font_primary;
+                max-width: 44.5rem;
+
+                &:not(:last-child){
+                    margin-bottom: 2.5rem;
+                }
+
+                @media only screen and (max-width: $bp_md){
+                    max-width: 100%;
+                }
+                
+                @media only screen and (max-width: $bp_sm){
+                    font: 400 1.5rem/2.5rem $font_primary;
+                }
             }
         }
     }
