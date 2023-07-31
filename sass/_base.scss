@@ -660,3 +660,82 @@ footer{
         }
     }
 }
+
+#countries .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 16rem;
+
+    @media only screen and (max-width: $bp_md){
+        align-items: center;
+        flex-direction: column;
+        gap: 8rem;
+        margin-top: 12rem;
+    }
+
+    @media only screen and (max-width: $bp_md){
+        gap: 4.8rem;
+    }
+
+    > div{
+        flex: 1;
+        max-width: 35rem;
+        text-align: center;
+
+        &:nth-child(2){
+            .illustration_container{
+                transform: rotate(270deg);
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        &:nth-child(3){
+            .illustration_container{
+                transform: rotate(180deg);
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .illustration_container{
+            background: url("../../images/index/bg-pattern-hero-home.svg") no-repeat center / contain;
+            height: 20.2rem;
+            margin: 0 auto 5rem auto;
+            width: 20.2rem;
+
+            img{
+                height: 100%;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+        h3{
+            align-self: flex-end;
+            color: $color_dark_grey;
+            font: 500 2rem/2.6rem $font_primary;
+            letter-spacing: .5rem;
+            margin-bottom: 3.2rem;
+            text-transform: uppercase;
+        }
+
+        p{
+            color: $color_dark_grey;
+            font: 400 1.6rem/2.6rem $font_primary;
+        }
+
+        a{
+            background: $color_peach;
+            color: $color_white;
+
+            &:hover{
+                background: $color_light_peach;
+            }
+        }
+    }
+}
