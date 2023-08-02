@@ -1,48 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+        <link rel="stylesheet" href="./css/main.min.css">
+        <script src="./js/index.js"></script>
+        <title>Designo Agency</title>
+    </head>
+    <body id="contact_page">
+        <nav>
+            <div class="container">
+                <a href="/index.html" class="logo"></a>
+                <ul>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button type="button" class="menu"></button>
+            </div>
+        </nav>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
-  Our Company
-  Locations
-  Contact
+        <section id="contact_header">
+            <div class="container">
+                <div>
+                    <h1>Contact Us</h1>
+                    <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
+                </div>
+                <form id="contact_form">
+                    <div class="input_group">
+                        <input type="text" placeholder="Name" name="name">
+                    </div>
+                    <div class="input_group">
+                        <input type="email" placeholder="Email Address" name="email">
+                    </div>
+                    <div class="input_group">
+                        <input type="text" placeholder="Phone" name="phone">
+                    </div>
+                    <div class="input_group">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn_primary">Submit</button>
+                </form>
+            </div>
+        </section>
 
-  Contact us
-  Ready to take it to the next level? Let’s talk about your project or idea and find out how 
-  we can help your business grow. If you are looking for unique digital experiences that’s 
-  relatable to your users, drop us a line.
+        <section id="countries">
+            <div class="container">
+                <div class="country">
+                    <div class="illustration_container">
+                        <img src="/images/global/illustration-canada.svg" alt="some buildings from canada">
+                    </div>
+                    <h3>Canada</h3>
+                    <a href="#" class="btn_primary">See Location</a>
+                </div>
+                <div class="country">
+                    <div class="illustration_container">
+                        <img src="/images/global/illustration-australia.svg" alt="some buildings from canada">
+                    </div>
+                    <h3>Australia</h3>
+                    <a href="#" class="btn_primary">See Location</a>
+                </div>
+                <div class="country">
+                    <div class="illustration_container">
+                        <img src="/images/global/illustration-united-kingdom.svg" alt="some buildings from canada">
+                    </div>
+                    <h3>United Kingdom</h3>
+                    <a href="#" class="btn_primary">See Location</a>
+                </div>
+            </div>
+        </section>
 
-  Name
-  Email address
-  Phone
-  Your message
-  Submit
+        <footer>
+            <div class="container">
+                <div class="head">
+                    <div class="logo"></div>
+                    <ul>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
 
-  Canada
-  See location
+                <div class="foot">
+                    <div class="address">
+                        <p>Designo Central Office</p>
+                        <p>3886 Wellington Street</p>
+                        <p>Toronto, Ontario M9C 3J5</p>
+                    </div>
+        
+                    <div class="contact">
+                        <p>Contact Us (Central Office)</p>
+                        <p>P : +1 253-863-8967</p>
+                        <p>M : contact@designo.co</p>
+                    </div>
+        
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./images/global/icon-facebook.svg" alt="facebook icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/global/icon-youtube.svg" alt="youtube icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/global/icon-twitter.svg" alt="twitter icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/global/icon-pinterest.svg" alt="pinterest icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/global/icon-instagram.svg" alt="instagram icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
-  Australia
-  See location
-
-  United Kingdom
-  See location
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
+        <div class="overlay"></div>
+        <div class="bg_leaf_2"></div>
+    </body>
 </html>
