@@ -86,33 +86,9 @@
             flex: 1;
             max-width: 35rem;
 
-            &.map_canada{
-                background: url("../../images/locations/image-map-canada.png") no-repeat center / cover;
-            }
-
-            &.map_australia{
-                background: url("../../images/locations/image-map-australia.png") no-repeat center / cover;
-            }
-
-            &.map_uk{
-                background: url("../../images/locations/image-map-united-kingdom.png") no-repeat center / cover;
-            }
-
             @media only screen and (max-width: $bp_md){
                 background: url("../../images/locations/image-map-canada-tablet.png") no-repeat center / cover;
                 max-width: unset;
-
-                &.map_canada{
-                    background: url("../../images/locations/image-map-canada-tablet.png") no-repeat center / cover;
-                }
-    
-                &.map_australia{
-                    background: url("../../images/locations/image-map-australia-tablet.png") no-repeat center / cover;
-                }
-    
-                &.map_uk{
-                    background: url("../../images/locations/image-map-united-kingdom-tablet.png") no-repeat center / cover;
-                }
             }
 
             @media only screen and (max-width: $bp_sm){
